@@ -13,6 +13,10 @@
 
 <pre><code>git clone https://github.com/your-username/TaskManagerAPI.git</code></pre>
 
+<p>Change to the project directory:</p>
+
+<pre><code>cd TaskManagerAPI</code></pre>
+
 <p>Install dependencies:</p>
 
 <pre><code>pip install -r requirements.txt</code></pre>
