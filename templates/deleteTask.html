@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskManagerAPI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .welcome-message {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #573b8a;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #6d44b8;
+        }
+        body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group .submit-btn {
+      background-color: #6d44b8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .form-group .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the TaskManagerAPI</h1>
+        <div class="welcome-message">
+            
+        </div>
+    </div>
+    <div class="button-container">
+        
+        <a href="createTask.html" class="button">Create Task</a>
+        <a href="retrieveTask.html" class="button">Retrieve Task</a>
+        <a href="updateTask.html" class="button">Update Task</a>
+        <a href="deleteTask.html" class="button">Delete Task</a>
+        <a href="listAllTasks.html" class="button">List All Tasks</a>
+    </div>
+    <br><br>
+    <div class="container">
+        <h2>Delete Task</h2>
+        <form action="/deleteTask" method="POST">
+          <div class="form-group">
+            <label for="task_id">Task ID:</label>
+            <input type="text" id="task_id" name="task_id" required>
+          </div>
+    
+          <div class="form-group">
+            <input type="submit" value="Delete" class="submit-btn">
+          </div>
+        </form>
+    
+        {% if message %}
+        <div class="message">
+          {{ message }}
+        </div>
+        {% endif %}
+      </div>
+</body>
+</html>

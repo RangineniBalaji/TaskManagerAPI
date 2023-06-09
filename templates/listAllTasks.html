@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskManagerAPI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .welcome-message {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #573b8a;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #6d44b8;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto; 
+        }
+        h2{
+            text-align: center;
+            color: #6d44b8;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the TaskManagerAPI</h1>
+        <div class="welcome-message">
+        </div>
+    </div>
+    <div class="button-container">
+        
+        <a href="createTask.html" class="button">Create Task</a>
+        <a href="retrieveTask.html" class="button">Retrieve Task</a>
+        <a href="updateTask.html" class="button">Update Task</a>
+        <a href="deleteTask.html" class="button">Delete Task</a>
+        <a href="listAllTasks.html" class="button">List All Tasks</a>
+    </div>
+    <br><br>
+    <h2>All Tasks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.due_date }}</td>
+                <td>{{ task.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
